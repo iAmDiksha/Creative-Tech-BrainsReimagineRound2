@@ -56,6 +56,33 @@ document.addEventListener('DOMContentLoaded', function () {
         open.style.display = "inline-block"
         menu.style.right = "-100%"
     })
-    
+
+    let t1 = gsap.timeline();
+
+    t1.from("nav",1,{
+        opacity: 0,
+        y: "-40px"
+    })
+    t1.from("menu",1,{
+        opacity: 0,
+        x: "-80px"
+    })
+    t1.from(".head .txt h1",1,{
+        opacity: 0,
+        x: "-30px"
+    })
+    t1.from(".head .txt p",1,{
+        opacity: 0,
+        x: "30px"
+    })
+    t1.from(".head .image",2,{
+        opacity:0,
+        y: "-50px",
+    })
+    t1.from(".head .small",1,{
+        opacity:0,
+        y: "-50px",
+    })
+
 });
 
