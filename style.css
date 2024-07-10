@@ -31,9 +31,8 @@ menu ul{
     justify-content: center;
     padding: 0 50px;
     align-items: center;
-    /* height: 80px; */
     border: 2px solid;
-    border-left: no;
+    border-left: none;
     border-right: none;
 }
 
@@ -41,7 +40,7 @@ menu ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 
 menu ul li{
@@ -58,7 +57,7 @@ menu ul li:nth-child(1){
 }
 
 menu ul li:hover{
-    background-color: rgb(253, 231, 104);
+    background-color: rgba(235, 235, 235, 0.9);
 }
 
 .head{
@@ -154,7 +153,7 @@ img{
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 50px;
+    padding: 20px 5px;
     padding-bottom: 0px;
 }
 
@@ -175,6 +174,7 @@ img{
     line-height: 36px;
     font-size: 24px;
 }
+
 .steps{
     padding: 30px 0;
 }
@@ -276,16 +276,19 @@ img{
     text-align: center;
     font-weight: normal;
     font-size: 40px;
+    margin-bottom: -30px;
 }
+
 
 .concerns{
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
+    padding-top: 60px;
 }
 
 .images{
@@ -293,21 +296,27 @@ img{
    justify-content: center;
    align-items: center;
    gap: 20px;
+   width: 100%;
 }
 
 
 .img5{
-    width: 100px;
+    min-width: 100px;
     border-radius: 50%;
     height: 100px;
     background-color: white;
 }
 
 .concerns-txt{
-    max-width: 800px;
-    padding: 10px 50px;
+    max-width: 100%;
+    width: 800px;
     font-size: 20px;
     line-height: 30px;
+    margin: auto;
+}
+
+.concerns-txt p{
+    text-align: justify;
 }
 
 .btn{
@@ -365,6 +374,10 @@ img{
     margin-bottom: 30px;
 }
 
+.chooseus h1{
+    padding: 0 15px 20px;
+}
+
 .circles{
     display: flex;
     justify-content: space-around;
@@ -379,7 +392,11 @@ img{
 .circle-img{
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
+    margin: auto;
+}
+
+.circle p{
+    margin: 20px 0;
 }
 
 .ratings{
@@ -417,15 +434,20 @@ img{
 .testcard{
     min-width: 380px;
     background-color: rgb(200, 238, 248);
-    text-align: center;
     padding: 20px 10px;
     height: 370px;
+    text-align: center;
     margin-bottom: 30px;
 }
 
 .customertestimonials p{
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px 10px;
+    text-align: justify;
+}
+
+.author p{
+    text-align: center;
 }
 
 
@@ -479,8 +501,171 @@ footer p{
     margin: auto;
 }
 
+.shopbycategory h1, .shopbyingredients h1{
+    margin-bottom: 5px;
+}
+
+
+.shopbyingredients .arrow {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    padding: 5px 7px;
+    font-size: 30px;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.bar{
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    margin-top: 11px;
+}
+
+.bar.open, .bar.close{
+    display: none;
+}
+
+@media screen and (max-width:1050px){
+    .bar{
+        display: inline-block;
+    }
+    .bar.open{
+        display: inline-block;
+    }
+    .bar.close{
+        display: none;
+    }
+    menu{
+        position: relative;
+        border: none;
+        z-index: 10;
+    }
+    menu ul{
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        border: none;
+        justify-content: flex-start;
+        background-color: white;
+        padding: 0;
+        width: 250px;
+        height: 82vh;
+        gap: 0;
+    }
+    menu ul li{
+        border: none;
+        width: 100%;
+        height: auto;
+        padding: 10px 30px;
+        margin: 5px;
+    }
+    menu ul li:nth-child(1){
+        border: none;
+    }
+
+
+    .head .txt{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:stretch;
+        gap: 10px;
+        padding: 50px;
+    }
+
+    .head .txt p{
+        margin-left: auto;
+        font-size: 20px;
+        width: 70%;
+    }
+    .head .txt h1{
+        font-size: 30px;
+        width: 70%;
+    }
+.head{
+    min-height: 100vh;
+}
+.img1{
+    width: 250px;
+    height: 330px;
+    top: 50%;
+    left: 50%;
+}
+.img2{
+    width: 200px;
+    height: 220px;
+    top: 36%;
+    left: 20%;
+}
+
+
+.img3{
+    width: 300px;
+    height: 200px;
+    top: 45%;
+}
+}
+@media screen and (max-width:800px){
+    .img1{
+        width: 200px;
+        height: 280px;
+        top: 40%;
+        left: 50%;
+    }
+    .head .txt p{
+        margin-left: auto;
+        font-size: 20px;
+        width: 100%;
+    }
+    .head .txt h1{
+        font-size: 30px;
+        width: 100%;
+    }
+}
 @media screen and (max-width:600px){
     .circles{
         flex-direction: column;
+    }
+    .img1{
+        width: 200px;
+        height: 280px;
+        top: 50%;
+        left: 50%;
+    }
+    .testcard{
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .steps ul li{
+        font-size: 18px;
+    }
+    .img1{
+        width: 200px;
+        height: 280px;
+        top: 60%;
+        left: 50%;
+    }
+    .heading{
+        font-size: 32px;
+    }
+    .sell h1{
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+    .arrow{
+        display: none;
+    }
+    .topsellers .card, .topsellers .card .card-img{
+        max-width: 250px;
     }
 }
