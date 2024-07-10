@@ -100,6 +100,7 @@ menu ul li:hover{
     font-size: 18px;
     width: 150px;
     text-align: right;
+    z-index: 5;
 }
 
 .img1{
@@ -643,6 +644,10 @@ footer p{
         min-width: 300px;
         max-width: 300px;
     }
+    .head .txt, nav{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media screen and (max-width:400px){
@@ -651,7 +656,7 @@ footer p{
     }
     .img1{
         width: 200px;
-        height: 280px;
+        height: 278px;
         top: 60%;
         left: 50%;
     }
@@ -667,5 +672,9 @@ footer p{
     }
     .topsellers .card, .topsellers .card .card-img{
         max-width: 250px;
+    }
+    .steps{
+        padding: 10px 0;
+        padding-bottom: 30px;
     }
 }
