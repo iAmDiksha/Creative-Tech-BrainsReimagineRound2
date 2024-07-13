@@ -67,21 +67,22 @@ document.addEventListener('DOMContentLoaded', function () {
         opacity: 0,
         x: "-80px"
     })
-    t1.from(".head .txt h1",1,{
+    t1.from(".head .txt h1",2,{
         opacity: 0,
-        x: "-30px"
+        x: "-100px"
     })
-    t1.from(".head .txt p",1,{
+    t1.from(".head .txt p",2,{
         opacity: 0,
-        x: "30px"
+        x: "100px"
     })
-    t1.from(".head .image",2,{
+    t1.from(".head .image",{
         opacity:0,
-        y: "-50px",
+        y: "-100px",
+        stagger: 1
     })
-    t1.from(".head .small",1,{
+    t1.from(".head .small",1.2,{
         opacity:0,
-        y: "-50px",
+        y: "-70px",
     })
 
 });

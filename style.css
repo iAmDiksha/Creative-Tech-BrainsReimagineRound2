@@ -21,7 +21,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 50px;
+    padding: 1px 50px;
     align-items: center;
 }
 
@@ -73,6 +73,7 @@ menu ul li:hover{
     align-items: flex-start;
     gap: 100px;
     padding: 50px;
+    padding-top: 30px;
 }
 
 .head .txt h1{
@@ -233,6 +234,7 @@ img{
 
 .card-img{
     width: 300px;
+    padding: 0 5px;
 }
 .card:hover {
     transform: translateY(-10px);
@@ -521,11 +523,13 @@ footer p{
     background-color: white;
 }
 
-.bar{
-    font-size: 30px;
-    display: none;
+.icons{
     cursor: pointer;
-    margin-top: 11px;
+    font-size: 20px;
+}
+
+.bar{
+    display: none;
 }
 
 .bar.open, .bar.close{
@@ -657,8 +661,14 @@ footer p{
     .img1{
         width: 200px;
         height: 278px;
-        top: 60%;
-        left: 50%;
+        left: 70%;
+        top: 45%;
+    }
+    .head{
+        min-height: 80vh;
+    }
+    .img3{
+        display: none;
     }
     .heading{
         font-size: 32px;
@@ -678,3 +688,4 @@ footer p{
         padding-bottom: 30px;
     }
 }
+
