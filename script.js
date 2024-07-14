@@ -67,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
         opacity: 0,
         x: "-80px"
     })
-    t1.from(".head .txt h1",2,{
+    t1.from(".head .txt h1",{
         opacity: 0,
         x: "-100px"
     })
-    t1.from(".head .txt p",2,{
+    t1.from(".head .txt p",{
         opacity: 0,
         x: "100px"
     })
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         y: "-100px",
         stagger: 1
     })
-    t1.from(".head .small",1.2,{
+    t1.from(".head .small",1,{
         opacity:0,
         y: "-70px",
     })
