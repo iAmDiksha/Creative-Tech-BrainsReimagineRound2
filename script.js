@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let container = document.querySelector('.container')
+    let counter = document.querySelector('.counter')
+    let preloader = document.querySelector('.preloader')
+    function loader(){
+        let count = setInterval(()=>{
+            let c = parseInt(counter.innerText);
+            c = c + 1;
+            counter.innerText = c.toString();
+            if(c === 100)
+            {
+                clearInterval(count);
+                counter.classList.add('counter-hide')
+                preloader.classList.add('pre-active')
+                container.classList.remove('container_hide')
+            }
+        },60)
+    }
+
+    loader();
+
     const cardsContainers = document.querySelectorAll('.cards');
     const leftArrows = document.querySelectorAll('.arrow.left');
     const rightArrows = document.querySelectorAll('.arrow.right');
