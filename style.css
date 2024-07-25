@@ -34,25 +34,12 @@ body,html{
     color: white;
 }
 
-.preloader:before{
-    content: 'Loading';
-    font-size: 12em;
-    text-transform: uppercase;
-    position: absolute;
-    font-weight: 900;
-    color: rgba(235, 235, 235, 0.15);
-}
-
 .counter{
-    font-size: 16em;
+    width: 400px;
     position: relative;
     font-weight: 700;
     z-index: 1;
-}
-
-.counter:after{
-    content: '%';
-    font-size: 0.5em;
+    top: 0;
 }
 
 .preloader.pre-active{
@@ -87,9 +74,9 @@ menu ul{
     justify-content: center;
     padding: 0 50px;
     align-items: center;
-    border: 2px solid;
+    /* border: 2px solid;
     border-left: none;
-    border-right: none;
+    border-right: none; */
 }
 
 .icons{
@@ -100,21 +87,17 @@ menu ul{
 }
 
 menu ul li{
-    border-right: 2px solid;
+    /* border-right: 2px solid; */
     height: 100%;
-    padding: 10px 40px;
-    border-left: none;
+    padding: 10px 20px;
+    /* border-left: none; */
     cursor: pointer;
     list-style: none;
-}
-
-menu ul li:nth-child(1){
-    border-left: 2px solid;
+    font-weight: bold;
 }
 
 menu ul li:hover{
-    background-color: rgba(235, 235, 235, 0.9);
-    background-color: #f4e3be;
+    border-bottom: 2px solid #d6b469;
 }
 
 .input{
@@ -176,6 +159,7 @@ menu ul li:hover{
     margin: 20px auto;
     position: relative;
     width: 100%;
+    margin-top: 2px;
     /* Use padding-bottom to maintain aspect ratio */
     padding-bottom: 30.25%; /* 16:9 aspect ratio (height/width*100%) */
     overflow: hidden; /* Ensures no overflow of the image */
@@ -713,7 +697,7 @@ footer p{
     text-transform: uppercase;
 }
 
-@media screen and (max-width:1050px){
+@media screen and (max-width:850px){
     .bar{
         display: inline-block;
     }
@@ -748,51 +732,13 @@ footer p{
         height: auto;
         padding: 10px 30px;
         margin: 5px;
+        font-weight: normal;
     }
-    menu ul li:nth-child(1){
+    menu ul li:hover{
+        background-color: #f4e3be;
         border: none;
     }
 
-
-    .head .txt{
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items:stretch;
-        gap: 10px;
-        padding: 50px;
-    }
-
-    .head .txt p{
-        margin-left: auto;
-        font-size: 20px;
-        width: 70%;
-    }
-    .head .txt h1{
-        font-size: 30px;
-        width: 70%;
-    }
-.head{
-    min-height: 100vh;
-}
-.img1{
-    width: 250px;
-    height: 330px;
-    top: 50%;
-    left: 50%;
-}
-.img2{
-    width: 200px;
-    height: 220px;
-    top: 36%;
-    left: 20%;
-}
-
-
-.img3{
-    width: 300px;
-    height: 200px;
-    top: 45%;
-}
 }
 
 @media screen and (max-width:890px)
@@ -814,18 +760,9 @@ footer p{
     font-size: 30px;
     text-transform: uppercase;
 }
-.preloader:before{
-    content: 'Loading';
-    font-size: 8em;
-}
 
 .counter{
-    font-size: 10em;
-}
-
-.counter:after{
-    content: '%';
-    font-size: 0.4em;
+    width: 350px;
 }
 
 }
@@ -877,21 +814,11 @@ footer p{
     padding-right: 20px;
 }
 
-.preloader:before{
-    content: 'Loading';
-    font-size: 6em;
-}
-
 .counter{
-    font-size: 10em;
+    width: 350px;
     position: relative;
     font-weight: 700;
     z-index: 1;
-}
-
-.counter:after{
-    content: '%';
-    font-size: 0.4em;
 }
 
 }
@@ -933,21 +860,12 @@ footer p{
         top: 55%;
         left: 20%;
     }
-    .preloader:before{
-        content: 'Loading';
-        font-size: 3em;
-    }
-    
+
     .counter{
-        font-size: 7em;
+        width: 250px;
         position: relative;
         font-weight: 700;
         z-index: 1;
-    }
-    
-    .counter:after{
-        content: '%';
-        font-size: 0.4em;
     }
 }
 @media screen and (max-width:400px){

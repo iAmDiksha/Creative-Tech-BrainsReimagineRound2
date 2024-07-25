@@ -2,11 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let container = document.querySelector('.container')
     let counter = document.querySelector('.counter')
     let preloader = document.querySelector('.preloader')
+    let c = 0;
     function loader(){
         let count = setInterval(()=>{
-            let c = parseInt(counter.innerText);
             c = c + 1;
-            counter.innerText = c.toString();
             if(c === 100)
             {
                 clearInterval(count);
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 preloader.classList.add('pre-active')
                 container.classList.remove('container_hide')
             }
-        },60)
+        },10)
     }
 
     loader();
