@@ -57,33 +57,53 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.style.right = "-100%"
     })
 
-    let t1 = gsap.timeline();
 
-    t1.from("nav",1,{
-        opacity: 0,
-        y: "-40px"
-    })
-    t1.from("menu",1,{
-        opacity: 0,
-        x: "-80px"
-    })
-    t1.from(".head .txt h1",{
-        opacity: 0,
-        x: "-100px"
-    })
-    t1.from(".head .txt p",{
-        opacity: 0,
-        x: "100px"
-    })
-    t1.from(".head .image",{
-        opacity:0,
-        y: "-100px",
-        stagger: 1
-    })
-    t1.from(".head .small",1,{
-        opacity:0,
-        y: "-70px",
-    })
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev-btn');
+    const nextButton = document.querySelector('.next-btn');
+    let currentSlide = 0;
+    let slideInterval;
+
+    const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    };
+
+    const nextSlide = () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    };
+
+    const prevSlide = () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    };
+
+    const startSlideShow = () => {
+        slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    };
+
+    const stopSlideShow = () => {
+        clearInterval(slideInterval);
+    };
+
+    prevButton.addEventListener('click', () => {
+        stopSlideShow();
+        prevSlide();
+        startSlideShow();
+    });
+
+    nextButton.addEventListener('click', () => {
+        stopSlideShow();
+        nextSlide();
+        startSlideShow();
+    });
+
+    startSlideShow(); // Start slideshow on page load
 
 });
 
